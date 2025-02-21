@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>A&S Móveis Planejados</title>
+</head>
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary': '#FFD700', // Cor amarela do logo
+                    'secondary': '#000000', // Cor preta do fundo
+                    'nav': '#964B00',
+                },
+            }
+        }
+    }
+</script>
+
+<body>
+    <header class="fixed w-full top-0 z-50 bg-nav bg-opacity-50 h-16">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class=" flex">
+                <a href=""><img src="/src/img/icones/logo.png" alt="A&S Móveis Planejados" class="h-12"></a>
+                <Span class="my-5">MÓVEIS
+                    PLANEJADOS</Span>
+            </div>
+            <div class="">
+                <button class="text-white">
+                    <img src="/src/img/icones/menu.png" class="h-10 w-10" alt="menu">
+                </button>
+            </div>
+            <div class="hidden md:hidden md:flex-col   space-x-8">
+                <a href="#portfolio" class="text-white hover:text-primary">PORTFOLIO</a>
+                <a href="#avaliacao" class="text-white hover:text-primary">AVALIAÇÃO</a>
+                <a href="#endereco" class="text-white hover:text-primary">ENDEREÇO</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">PORTFOLIO</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Repetir para cada imagem do portfolio -->
+                <div class="overflow-hidden rounded-lg">
+                    <img src="path/to/portfolio1.jpg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <!-- Adicionar mais imagens aqui -->
+            </div>
+        </div>
+    </section>
+</body>
