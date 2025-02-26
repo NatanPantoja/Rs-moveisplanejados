@@ -23,38 +23,177 @@
 </script>
 
 <body>
-    <header class="fixed w-full top-0 z-50 bg-nav bg-opacity-50 h-16">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class=" flex">
-                <a href=""><img src="/src/img/icones/logo.png" alt="A&S Móveis Planejados" class="h-12"></a>
-                <Span class="my-5">MÓVEIS
-                    PLANEJADOS</Span>
-            </div>
-            <div class="">
-                <button class="text-white">
-                    <img src="/src/img/icones/menu.png" class="h-10 w-10" alt="menu">
+    <header class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="bg-nav bg-opacity-0 transition-all duration-300" id="header-bg">
+            <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+                <!-- Logo e Nome - Adicionada classe para controle de visibilidade -->
+                <div class="flex items-center gap-2 transition-opacity duration-300 main-header-content">
+                    <a href="" class="logo-link">
+                        <img src="/Rs-moveisplanejados/src/img/icones/logo.png" alt="R&S Móveis Planejados"
+                            class="h-12">
+                    </a>
+                    <span class="text-white font-bold text-xl">MÓVEIS PLANEJADOS</span>
+                </div>
+
+                <!-- Botão do menu -->
+                <button onclick="onToggleMenu(this)" class="text-white z-50" name="menu">
+                    <img src="/Rs-moveisplanejados/src/img/icones/menu.png" class="h-8 w-8" alt="menu">
                 </button>
-            </div>
-            <div class="hidden md:hidden md:flex-col   space-x-8">
-                <a href="#portfolio" class="text-white hover:text-primary">PORTFOLIO</a>
-                <a href="#avaliacao" class="text-white hover:text-primary">AVALIAÇÃO</a>
-                <a href="#endereco" class="text-white hover:text-primary">ENDEREÇO</a>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20">
-        <div class="container mx-auto px-4">
+    <!-- Menu Lateral -->
+    <div
+        class="nav-links fixed top-0 right-[-100%] bg-nav w-[300px] h-screen transition-all duration-300 ease-in-out z-50 bg-opacity-50">
+        <!-- Cabeçalho do menu -->
+        <div class="flex items-center justify-between bg-nav p-4 border-b border-white/20">
+            <div class="flex items-center gap-2">
+                <img src="/Rs-moveisplanejados/src/img/icones/logo.png" alt="R&S" class="h-8">
+                <span class="text-white font-bold">MÓVEIS PLANEJADOS</span>
+            </div>
+            <button onclick="onToggleMenu(this)" class="text-white" name="close">
+                <img src="/Rs-moveisplanejados/src/img/icones/icons8-x.png" class="h-6 w-6" alt="fechar">
+            </button>
+        </div>
+
+        <!-- Links do menu -->
+        <div class="flex flex-col p-6">
+            <a href="/Rs-moveisplanejados/index.html"
+                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">HOME</a>
+            <a href="#sobre" class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">SOBRE NÓS</a>
+            <a href="/Rs-moveisplanejados/page/portfolio.html"
+                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">PORTFOLIO</a>
+            <a href="#avaliacao"
+                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">AVALIAÇÃO</a>
+            <a href="#endereco"
+                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">LOCALIZAÇÃO</a>
+
+            <!-- Redes sociais -->
+            <div class="flex gap-4 mt-8">
+                <a href="#" class="text-white">
+                    <img src="/Rs-moveisplanejados/src/img/icones/X-rede.png" alt="X" class="h-8 w-8">
+                </a>
+                <a href="#" class="text-white">
+                    <img src="/Rs-moveisplanejados/src/img/icones/instagram.png" alt="Instagram" class="h-8 w-8">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-20 bg-black">
+        <div class="container  mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">PORTFOLIO</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Repetir para cada imagem do portfolio -->
+
                 <div class="overflow-hidden rounded-lg">
-                    <img src="path/to/portfolio1.jpg" alt="Projeto 1"
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
                         class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                 </div>
-                <!-- Adicionar mais imagens aqui -->
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="/Rs-moveisplanejados/src/img/sala/1.jpeg" alt="Projeto 1"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                </div>
+
             </div>
         </div>
     </section>
+    <!-- Footer -->
+    <footer class="bg-zinc-900 py-6 md:py-8 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-sm md:text-base">&copy; R&S Móveis Planejados</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-white hover:text-primary">
+                        <img src="/Rs-moveisplanejados/src/img/icones/instagram.png" alt="X" class="h-6 md:h-8">
+                    </a>
+                    <a href="#" class="text-white hover:text-primary">
+                        <img src="/Rs-moveisplanejados/src/img/icones/X-rede.png" alt="Instagram" class="h-6 md:h-8">
+                    </a>
+                    <a href="#" class="text-white hover:text-primary">
+                        <img src="/Rs-moveisplanejados/src/img/icones/whatsapp.png" alt="WhatsApp" class="h-6 md:h-8">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/Rs-moveisplanejados/src/js/index.js"></script>
 </body>

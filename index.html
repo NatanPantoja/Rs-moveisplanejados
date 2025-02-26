@@ -19,7 +19,7 @@
                 },
 
                 backgroundImage: {
-                    mdf: "url('../src/img/icones/Mdf.svg')",
+                    mdf: "url('./src/img/icones/Mdf.svg')",
                 },
             }
         }
@@ -34,14 +34,14 @@
                 <!-- Logo e Nome - Adicionada classe para controle de visibilidade -->
                 <div class="flex items-center gap-2 transition-opacity duration-300 main-header-content">
                     <a href="" class="logo-link">
-                        <img src="/src/img/icones/logo.png" alt="R&S Móveis Planejados" class="h-12">
+                        <img src="./src/img/icones/logo.png" alt="R&S Móveis Planejados" class="h-12">
                     </a>
                     <span class="text-white font-bold text-xl">MÓVEIS PLANEJADOS</span>
                 </div>
 
                 <!-- Botão do menu -->
                 <button onclick="onToggleMenu(this)" class="text-white z-50" name="menu">
-                    <img src="/src/img/icones/menu.png" class="h-8 w-8" alt="menu">
+                    <img src="./src/img/icones/menu.png" class="h-8 w-8" alt="menu">
                 </button>
             </nav>
         </div>
@@ -53,18 +53,18 @@
         <!-- Cabeçalho do menu -->
         <div class="flex items-center justify-between bg-nav p-4 border-b border-white/20">
             <div class="flex items-center gap-2">
-                <img src="/src/img/icones/logo.png" alt="R&S" class="h-8">
+                <img src="./src/img/icones/logo.png" alt="R&S" class="h-8">
                 <span class="text-white font-bold">MÓVEIS PLANEJADOS</span>
             </div>
             <button onclick="onToggleMenu(this)" class="text-white" name="close">
-                <img src="/src/img/icones/close.png" class="h-6 w-6" alt="fechar">
+                <img src="./src/img/icones/icons8-x.png" class="h-6 w-6" alt="fechar">
             </button>
         </div>
 
         <!-- Links do menu -->
         <div class="flex flex-col p-6">
             <a href="#sobre" class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">SOBRE NÓS</a>
-            <a href="#portfolio"
+            <a href="./src/page/portfolio.html"
                 class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">PORTFOLIO</a>
             <a href="#avaliacao"
                 class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">AVALIAÇÃO</a>
@@ -74,17 +74,17 @@
             <!-- Redes sociais -->
             <div class="flex gap-4 mt-8">
                 <a href="#" class="text-white">
-                    <img src="/src/img/icones/x-twitter.png" alt="X" class="h-8 w-8">
+                    <img src="./src/img/icones/X-rede.png" alt="X" class="h-8 w-8">
                 </a>
                 <a href="#" class="text-white">
-                    <img src="/src/img/icones/instagram.png" alt="Instagram" class="h-8 w-8">
+                    <img src="./src/img/icones/instagram.png" alt="Instagram" class="h-8 w-8">
                 </a>
             </div>
         </div>
     </div>
 
     <section class="relative">
-        <img src="/src/img/principal.jpeg" class="w-full h-screen object-cover" alt="Cozinha">
+        <img src="./src/img/principal.jpeg" class="w-full h-screen object-cover" alt="Cozinha">
 
         <!-- Opcional: Adicionar um overlay escuro para melhorar contraste com o header -->
         <div class="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -95,7 +95,7 @@
         <div class=" mx-auto px-4">
             <div class="flex flex-col lg:flex-row gap-8">
                 <div class="space-y-6 flex flex-col items-center lg:items-start lg:w-1/2">
-                    <img src="/src/img/icones/logo.png" class="h-10 md:h-12" alt="">
+                    <img src="./src/img/icones/logo.png" class="h-10 md:h-12" alt="">
                     <p class="text-base md:text-lg text-center lg:text-left">
                         A <span class="font-bold">R&S Móveis Planejados</span> é especializada na criação e fabricação
                         de móveis sob medida, oferecendo soluções exclusivas que unem qualidade, funcionalidade e
@@ -116,15 +116,15 @@
 
                 <!-- Grid de imagens -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:w-1/2">
-                    <img src="/src/img/cozinha/3.jpeg" alt="Cozinha Planejada"
+                    <img src="./src/img/cozinha/3.jpeg" alt="Cozinha Planejada"
                         class="rounded-lg shadow-xl h-[200px] sm:h-[220px] w-full object-cover">
-                    <img src="/src/img/quarto/6.jpeg" alt="Quarto Planejado"
+                    <img src="./src/img/quarto/6.jpeg" alt="Quarto Planejado"
                         class="rounded-lg shadow-xl h-[200px] sm:h-[220px] w-full object-cover">
-                    <img src="/src/img/canta alemão/2.jpeg" alt="Cozinha Alemã"
+                    <img src="./src/img/canta alemão/2.jpeg" alt="Cozinha Alemã"
                         class="rounded-lg shadow-xl h-[200px] sm:h-[220px] w-full object-cover">
-                    <img src="/src/img/sala/8.jpeg" alt="Sala Planejada"
+                    <img src="./src/img/sala/8.jpeg" alt="Sala Planejada"
                         class="rounded-lg shadow-xl h-[200px] sm:h-[220px] w-full object-cover">
-                    <a href="#portfolio"
+                    <a href="./src/page/portfolio.html"
                         class="col-span-full bg-yellow-500 text-center py-3 md:py-4 text-black font-bold hover:bg-yellow-600 transition-colors rounded-lg">
                         VEJA MAIS >>
                     </a>
@@ -204,19 +204,19 @@
                 <p class="text-sm md:text-base">&copy; R&S Móveis Planejados</p>
                 <div class="flex gap-4">
                     <a href="#" class="text-white hover:text-primary">
-                        <img src="/src/img/icones/x-twitter.png" alt="X" class="h-6 md:h-8">
+                        <img src="./src/img/icones/instagram.png" alt="X" class="h-6 md:h-8">
                     </a>
                     <a href="#" class="text-white hover:text-primary">
-                        <img src="/src/img/icones/instagram.png" alt="Instagram" class="h-6 md:h-8">
+                        <img src="./src/img/icones/X-rede.png" alt="Instagram" class="h-6 md:h-8">
                     </a>
                     <a href="#" class="text-white hover:text-primary">
-                        <img src="/src/img/icones/whatsapp.png" alt="WhatsApp" class="h-6 md:h-8">
+                        <img src="./src/img/icones/whatsapp.png" alt="WhatsApp" class="h-6 md:h-8">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="/src/js/index.js"></script>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>
