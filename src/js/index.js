@@ -104,3 +104,21 @@ window.addEventListener('scroll', () => {
         headerBg.classList.remove('bg-opacity-50');
     }
 });
+
+// MODAL
+function openModal(imgElement) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    modalImg.src = imgElement.src;
+    modal.classList.remove('hidden');
+}
+
+function closeModal(event) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    // Fecha o modal apenas se o clique for fora da imagem
+    if (event.target !== modalImg) {
+        modal.classList.add('hidden');
+    }
+}
