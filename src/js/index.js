@@ -91,7 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Controle do header no scroll
+// Inicia o carousel quando a página carrega
+document.addEventListener('DOMContentLoaded', () => {
+    let autoPlayInterval = startAutoPlay();
+
+    // Reinicia o carousel quando a janela é redimensionada
+    window.addEventListener('resize', () => {
+        const newItemsPerView = window.innerWidth >= 768 ? 2 : 1;
+        if (newItemsPerView !== itemsPerView) {
+            currentPosition = 0;
+            carousel.style.transform = 'translateX(0)';
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = startAutoPlay();
+        }
+    });
+});
+
+// Controle do header no scroll pageYOffset
 const headerBg = document.getElementById('header-bg');
 
 window.addEventListener('scroll', () => {
@@ -122,3 +138,30 @@ function closeModal(event) {
         modal.classList.add('hidden');
     }
 }
+
+// Intersection Observer
+function observeElements() {
+    const elements = document.querySelectorAll('.fade-in');
+
+    const observerOptions = {
+        root: null, // Observa a viewport
+        rootMargin: '0px',
+        threshold: 0.4 // 40% do elemento visível
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Para de observar após a animação
+            }
+        });
+    }, observerOptions);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Chama a função quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', observeElements);

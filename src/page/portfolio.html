@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/src/img/icones/logo.png">
+
+    <!-- META TAG OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="R&S Móveis Planejados" />
+    <meta property="og:image" content="https://primeburgeria.netlify.app/src/img/icones/logo.png" />
+    <meta property="og:description" content="A melhor loja de móveis planejados da região!" />
+    <meta property="og:site_name" content="R&S Móveis Planejados" />
+
     <title>A&S Móveis Planejados</title>
 </head>
 
@@ -22,21 +31,39 @@
     }
 </script>
 
+<style>
+    @layer utilities {
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 <body>
     <header class="fixed w-full top-0 z-50 transition-all duration-300">
         <div class="bg-nav bg-opacity-0 transition-all duration-300" id="header-bg">
             <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
                 <!-- Logo e Nome - Adicionada classe para controle de visibilidade -->
                 <div class="flex items-center gap-2 transition-opacity duration-300 main-header-content">
-                    <a href="" class="logo-link">
-                        <img src="../img/icones/logo.png" alt="R&S Móveis Planejados" class="h-12">
+                    <a href="/index.html" class="logo-link">
+                        <!-- Ajuste do tamanho do logo para diferentes telas -->
+                        <img src="../img/icones/logo.png" alt="R&S Móveis Planejados" class="h-8 md:h-12">
                     </a>
-                    <span class="text-white font-bold text-xl">MÓVEIS PLANEJADOS</span>
+                    <!-- Ajuste do tamanho do texto para diferentes telas -->
+                    <span class="text-white font-bold text-lg md:text-xl">MÓVEIS PLANEJADOS</span>
                 </div>
 
                 <!-- Botão do menu -->
                 <button onclick="onToggleMenu(this)" class="text-white z-50" name="menu">
-                    <img src="../img/icones/menu.png" class="h-8 w-8" alt="menu">
+                    <!-- Ajuste do tamanho do ícone do menu para diferentes telas -->
+                    <img src="../img/icones/menu.png" class="h-6 w-6 md:h-8 md:w-8" alt="menu">
                 </button>
             </nav>
         </div>
@@ -49,7 +76,7 @@
         <div class="flex items-center justify-between bg-nav p-4 border-b border-white/20">
             <div class="flex items-center gap-2">
                 <img src="../img/icones/logo.png" alt="R&S" class="h-8">
-                <span class="text-white font-bold  sm:text-2xl">MÓVEIS PLANEJADOS</span>
+                <span class="text-white font-bold">MÓVEIS PLANEJADOS</span>
             </div>
             <button onclick="onToggleMenu(this)" class="text-white" name="close">
                 <img src="../img/icones/icons8-x.png" class="h-6 w-6" alt="fechar">
@@ -59,20 +86,17 @@
         <!-- Links do menu -->
         <div class="flex flex-col p-6">
             <a href="/index.html" class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">HOME</a>
-            <a href="#sobre" class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">SOBRE NÓS</a>
-            <a href="/Rs-moveisplanejados/page/portfolio.html"
-                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">PORTFOLIO</a>
-            <a href="#avaliacao"
+            <a href="/index.html#sobre"
+                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">SOBRE NÓS</a>
+            <a href="/index.html#avaliação"
                 class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">AVALIAÇÃO</a>
-            <a href="#endereco"
+            <a href="/index.html#endereco"
                 class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">LOCALIZAÇÃO</a>
 
             <!-- Redes sociais -->
             <div class="flex gap-4 mt-8">
-                <a href="#" class="text-white">
-                    <img src="../img/icones/X-rede.png" alt="X" class="h-8 w-8">
-                </a>
-                <a href="#" class="text-white">
+
+                <a href="https://www.instagram.com/r.s.moveis.planejados/" class="text-white">
                     <img src="../img/icones/instagram.png" alt="Instagram" class="h-8 w-8">
                 </a>
             </div>
@@ -82,23 +106,26 @@
 
     <!-- Portfolio -->
     <section id="portfolio" class="py-20 bg-black">
-        <div class="container  mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">PORTFOLIO</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+        <!--vou ter dividir essa parte em div de 9 imagem -->
+        <article class="container  mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">PORTFOLIO</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
 
                 <div class="overflow-hidden rounded-lg">
                     <img src="../img/sala/1.jpeg" alt="sala"
-                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 "
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 fade-in "
                         onclick="openModal(this)">
                 </div>
                 <div class=" overflow-hidden rounded-lg">
                     <img src="../img/quarto/1.jpeg" alt="quarto"
-                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 fade-in"
                         onclick="openModal(this)">
                 </div>
                 <div class="overflow-hidden rounded-lg">
                     <img src="../img/cozinha/1.jpeg" alt="cozinha"
-                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 fade-in "
                         onclick="openModal(this)">
                 </div>
                 <div class="overflow-hidden rounded-lg">
@@ -255,43 +282,38 @@
 
 
             </div>
-        </div>
+        </article>
     </section>
 
     <!-- Modal -->
-    <div id="imageModal"
+    <section id="imageModal"
         class="fixed inset-0 top-10 flex items-center justify-center bg-black bg-opacity-80 hidden transition-opacity duration-300"
         onclick="closeModal(event)">
 
         <div class="relative max-w-[90%] max-h-[90%] sm:max-w-[80%] md:max-w-[70%] lg:max-w-[60%]">
             <img id="modalImg" class="w-full h-auto max-h-[85vh] rounded-lg">
         </div>
-    </div>
+    </section>
 
 
-    <!-- Botão do WhatsApp fixo -->
     <section class="bg-black text-white">
-
-        <a href="https://wa.me/+556195104205" class="fixed bottom-5 right-5 animate-pulse" target="_blank">
+        <a href="https://wa.me/+556195104205" class="fixed bottom-5 right-5 lg:mb-3 animate-pulse z-[60]"
+            target="_blank">
             <img src="../img/icones/whatsapp.png" alt="WhatsApp" class="w-12 h-12" />
         </a>
     </section>
 
 
-
-
     <!-- Footer -->
-    <footer class="bg-zinc-900 py-6 md:py-8 bg-black text-white">
+    <footer class="bg-zinc-900 py-6 md:py-8  bg-black text-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p class="text-sm md:text-base">&copy; R&S Móveis Planejados</p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-white hover:text-primary">
+                <div class="flex gap-4 mr-10">
+                    <a href="https://www.instagram.com/r.s.moveis.planejados/" class="text-white hover:text-primary">
                         <img src="../img/icones/instagram.png" alt="X" class="h-6 md:h-8">
                     </a>
-                    <a href="#" class="text-white hover:text-primary">
-                        <img src="../img/icones/X-rede.png" alt="Instagram" class="h-6 md:h-8">
-                    </a>
+
 
                 </div>
             </div>
