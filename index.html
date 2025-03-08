@@ -10,7 +10,7 @@
     <!-- META TAG OG -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="R&S Móveis Planejados" />
-    <meta property="og:image" content="https://primeburgeria.netlify.app/src/img/icones/logo.png" />
+    <meta property="og:image" content="https://moveisplanejados-rs.netlify.app/src/img/icones/logo.png" />
     <meta property="og:description" content="A melhor loja de móveis planejados da região!" />
     <meta property="og:site_name" content="R&S Móveis Planejados" />
     <title>R&S Móveis Planejados</title>
@@ -93,26 +93,25 @@
         <div class="flex flex-col p-6">
             <a href="#sobre" class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">SOBRE NÓS</a>
             <a href="./src/page/portfolio.html"
-                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">PORTFOLIO</a>
+                class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">PORTFÓLIO</a>
             <a href="#avaliação"
                 class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">AVALIAÇÃO</a>
             <a href="#endereco"
                 class="text-white hover:text-primary py-4 border-b border-white/20 text-lg">LOCALIZAÇÃO</a>
 
             <!-- Redes sociais (Instagram e WhatsApp) -->
-            <div class="flex gap-4 mt-8">
+            <div class="flex gap-4 mt-8  object-cover">
 
-                <a href="https://www.instagram.com/r.s.moveis.planejados/" class="text-white">
-                    <img src="./src/img/icones/instagram.png" alt="Instagram" class="h-8 w-8">
-                </a>
+
 
             </div>
         </div>
     </div>
 
-    <section class="relative h-[820px]">
+    <section class="relative h-[620px] md:h-[720px] sm:h-[450px] ">
         <img src="./src/img/cozinha.svg" class="w-full h-full object-cover" alt="Cozinha">
     </section>
+
 
     <!--SOBRE-->
     <section class="py-10 md:py-20 bg-black text-whitev" id="sobre">
@@ -133,7 +132,7 @@
 
                         Nosso compromisso vai além da entrega: trabalhamos com prazos precisos e um alto padrão de
                         excelência,
-                        proporcionando uma experiência confiável e satisfatória. Com expertise em marcenaria
+                        proporcionando uma experiência confiável e satisfatória. Com competência em marcenaria
                         personalizada,
                         transformamos ideias em realidade, sempre buscando superar expectativas.<br>
 
@@ -166,7 +165,7 @@
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">AVALIAÇÃO</h2>
 
             <!-- Container do Carousel -->
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden " id="carousel">
                 <!-- Wrapper do Carousel -->
                 <div id="carousel" class="flex transition-transform duration-300 ease-in-out">
                     <!-- Cards de Avaliação -->
@@ -222,27 +221,32 @@
     <!-- Botão do WhatsApp fixo -->
 
     <section class="bg-black text-white">
-        <a href="https://wa.me/+556195104205" class="fixed bottom-5 right-5 lg:mb-3 animate-pulse  z-[60]"
-            target="_blank">
-            <img src="./src/img/icones/whatsapp.png" alt="WhatsApp" class="w-12 h-12" />
-        </a>
+
+        <article class="flex">
+            <a href="https://wa.me/+556195104205" class="fixed bottom-5 right-14 lg:mb-3 animate-pulse  z-[60]"
+                target="_blank">
+                <img src="./src/img/icones/whatsapp.png" alt="WhatsApp" class="w-12 h-12" />
+            </a>
+            <a href="https://www.instagram.com/r.s.moveis.planejados/"
+                class=" fixed bottom-5 right-2 lg:mb-3 animate-pulse  z-[60]">
+                <img src="./src/img/icones/instagram.png" alt="Instagram" class="h-12 w-12">
+            </a>
+        </article>
+
     </section>
 
 
     <!-- Footer -->
     <footer class="bg-zinc-900 py-6 md:py-8  bg-black text-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p class="text-sm md:text-base">&copy; R&S Móveis Planejados</p>
-                <div class="flex gap-4 mr-10">
-                    <a href="https://www.instagram.com/r.s.moveis.planejados/" class="text-white hover:text-primary">
-                        <img src="./src/img/icones/instagram.png" alt="X" class="h-6 md:h-8">
-                    </a>
-
-
-                </div>
-            </div>
-        </div>
+        <p class="flex justify-center text-center font-semibold flex-wrap">
+            Copyright &copy; Todos os Direitos Reservados | Desenvolvido por:
+            <span class="ml-1">
+                <a href="https://wa.me/5561981500971" target="_blank"
+                    class="text-prime-laranja no-underline cursor-pointer">
+                    Dev Natanael
+                </a>
+            </span>
+        </p>
     </footer>
     <script src="./src/js/index.js"></script>
 </body>

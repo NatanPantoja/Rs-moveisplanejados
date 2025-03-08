@@ -68,28 +68,13 @@ function moveCarousel() {
     carousel.style.transform = `translateX(${translateX}px)`;
 }
 
-// Auto-play do carousel com intervalo mais longo
+//Auto-play do carousel com intervalo mais longo
 function startAutoPlay() {
     return setInterval(() => {
         moveCarousel();
     }, 3000); // Muda a cada 3 segundos
 }
 
-// Inicia o carousel quando a página carrega
-document.addEventListener('DOMContentLoaded', () => {
-    let autoPlayInterval = startAutoPlay();
-
-    // Reinicia o carousel quando a janela é redimensionada
-    window.addEventListener('resize', () => {
-        const newItemsPerView = window.innerWidth >= 768 ? 2 : 1;
-        if (newItemsPerView !== itemsPerView) {
-            currentPosition = 0;
-            carousel.style.transform = 'translateX(0)';
-            clearInterval(autoPlayInterval);
-            autoPlayInterval = startAutoPlay();
-        }
-    });
-});
 
 // Inicia o carousel quando a página carrega
 document.addEventListener('DOMContentLoaded', () => {
@@ -106,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 // Controle do header no scroll pageYOffset
 const headerBg = document.getElementById('header-bg');
@@ -129,15 +115,16 @@ function openModal(imgElement) {
     modal.classList.remove('hidden');
 }
 
-function closeModal(event) {
+function closeModal(event, isButton = false) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
 
-    // Fecha o modal apenas se o clique for fora da imagem
-    if (event.target !== modalImg) {
+    // Fecha o modal apenas se o clique for fora da imagem ou no botão "X"
+    if (isButton || event.target !== modalImg) {
         modal.classList.add('hidden');
     }
 }
+
 
 // Intersection Observer
 function observeElements() {
@@ -165,3 +152,6 @@ function observeElements() {
 
 // Chama a função quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', observeElements);
+
+
+
