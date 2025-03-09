@@ -115,16 +115,15 @@ function openModal(imgElement) {
     modal.classList.remove('hidden');
 }
 
-function closeModal(event, isButton = false) {
+function closeModal(event) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
 
-    // Fecha o modal apenas se o clique for fora da imagem ou no botão "X"
-    if (isButton || event.target !== modalImg) {
+    // Fecha o modal apenas se o clique for fora da imagem
+    if (event.target !== modalImg) {
         modal.classList.add('hidden');
     }
 }
-
 
 // Intersection Observer
 function observeElements() {
