@@ -153,4 +153,15 @@ function observeElements() {
 document.addEventListener('DOMContentLoaded', observeElements);
 
 
+//WhatsApp
+document.addEventListener("DOMContentLoaded", () => {
+    const whatsappLink = document.getElementById("whatsapp-link");
 
+    if (whatsappLink) {
+        const numero = "556195104205";
+        const mensagem = "Olá! Vim pelo site e adorei as imagens dos seus trabalhos. Gostaria de fazer um orçamento.";
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+        whatsappLink.href = url;
+    }
+});
